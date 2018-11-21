@@ -33,7 +33,7 @@ if pid == CHILD:
     os.dup2(s,1)
     os.dup2(s,2)
 
-    # 以读写方式打开标准输出
+    # 以读写方式打开标准输出后关闭掉，不关闭掉会导致子进程中的slave端出现死循环输入输出
     tmp_fd = os.open(os.ttyname(1),os.O_RDWR)
     os.close(tmp_fd)
     # execlp函数可以把当前进程替换为一个新进程，且新进程与原进程有相同的PID。

